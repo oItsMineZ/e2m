@@ -247,8 +247,8 @@ kernelsu ()
             rm -rf Ke*
         fi
 
-        git submodule add -f -q https://github.com/StardustMod/KernelSU > /dev/null
-        bash <(curl -LSs "https://raw.githubusercontent.com/StardustMod/KernelSU/legacy/kernel/setup.sh") legacy
+        git submodule add -f -q https://github.com/36115/KernelSU > /dev/null
+        bash <(curl -LSs "https://raw.githubusercontent.com/36115/KernelSU/main/kernel/setup.sh") main
         separator
         check "KernelSU"
     fi
