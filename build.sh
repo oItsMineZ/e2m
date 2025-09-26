@@ -247,7 +247,7 @@ kernelsu ()
             rm -rf Ke*
         fi
 
-        git submodule add -f -q https://github.com/36115/RKSU > /dev/null
+        git submodule add -f -q https://github.com/36115/RKSU KernelSU > /dev/null
         bash <(curl -LSs "https://raw.githubusercontent.com/36115/RKSU/main/kernel/setup.sh") main
         separator
         check "KernelSU"
