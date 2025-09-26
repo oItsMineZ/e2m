@@ -397,6 +397,7 @@ rm -rf ./build.log
     fi
 
     if [[ "$KSU" == "y" ]]; then
+        sed -i "s/# CONFIG_KPROBES is not set/CONFIG_KPROBES=y/" arch/arm/configs/$KERNEL_DEFCONFIG
         echo "# CONFIG_KSU_LSM_SECURITY_HOOKS is not set" >> arch/arm/configs/$KERNEL_DEFCONFIG
         kernelsu
     fi
