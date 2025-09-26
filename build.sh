@@ -247,8 +247,8 @@ kernelsu ()
             rm -rf Ke*
         fi
 
-        git submodule add -f -q https://github.com/StardustMod/KernelSU > /dev/null
-        bash <(curl -LSs "https://raw.githubusercontent.com/StardustMod/KernelSU/legacy/kernel/setup.sh") legacy
+        git submodule add -f -q https://github.com/backslashxx/KernelSU > /dev/null
+        bash <(curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh") master
         separator
         check "KernelSU"
     fi
@@ -397,7 +397,7 @@ rm -rf ./build.log
     fi
 
     if [[ "$KSU" == "y" ]]; then
-        echo "# CONFIG_KSU_LSM_SECURITY_HOOKS is not set\nCONFIG_KSU_MANUAL_HOOK=y" >> arch/arm/configs/$KERNEL_DEFCONFIG
+        echo "# CONFIG_KSU_LSM_SECURITY_HOOKS is not set" >> arch/arm/configs/$KERNEL_DEFCONFIG
         kernelsu
     fi
 
